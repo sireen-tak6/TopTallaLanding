@@ -34,16 +34,20 @@ module.exports = defineConfig({
       runMode: 2,
       openMode: 2,
     },
-    reporter: 'cypress-mochawesome-reporter',
-    reporterOptions: {
-      charts: true,
-      reportDir: "cypress/results",
-      reportPageTitle: 'Test Execution Report',
-      embeddedScreenshots: true,
-      inlineAssets: true,
-      saveAllAttempts: false,
-    },
     baseUrl: "https://business.toptalla.com/en/",
 
   },
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: true,
+    reportDir: "cypress/results",
+    reportPageTitle: 'Test Execution Report',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
+  },
+  video: true,
+  screenshotOnRunFailure: true,
+  trashAssetsBeforeRuns:false,
+
 });

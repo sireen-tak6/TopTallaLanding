@@ -14,8 +14,6 @@ class LoginPage {
 
         HidePasswordButton: () => cy.get('.icon-button'),
 
-        boardlabel: () => cy.get('#root > ion-app > div:nth-child(1) > div > ion-toolbar.toolbar-segment.md.in-toolbar.hydrated.toolbar-label > ion-segment'),
-
         FailedMessage: () => cy.findByText('المعرف أو كلمة مرور غير صحيحة'),
 
     }
@@ -82,8 +80,7 @@ class LoginPage {
     }
 
     CheckBoardPage() {
-        cy.url().should('eq', 'https://partners.stg.toptalla.com/onboarding')
-        this.elements.boardlabel().should('be.visible')
+        cy.url().should('include', 'https://partners.stg.toptalla.com/calendar')
     }
 }
 module.exports = new LoginPage();
