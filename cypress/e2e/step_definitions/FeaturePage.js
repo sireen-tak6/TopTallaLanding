@@ -4,7 +4,7 @@ import {
     Then,
 } from "@badeball/cypress-cucumber-preprocessor";
 
-const FeaturesPage=require("../../pages/featurePage");
+const FeaturesPage = require("../../pages/featurePage");
 
 When("user can click on Features button", () => {
     FeaturesPage.ClickFeatureButtonNavbar()

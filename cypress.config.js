@@ -45,6 +45,7 @@ module.exports = defineConfig({
     embeddedScreenshots: true,
     inlineAssets: true,
     saveAllAttempts: false,
+    overwrite:false,
   },
   video: true,
   screenshotOnRunFailure: true,
