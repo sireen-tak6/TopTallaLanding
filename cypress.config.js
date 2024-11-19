@@ -46,6 +46,8 @@ module.exports = defineConfig({
     inlineAssets: true,
     saveAllAttempts: false,
     overwrite:false,
+    json:true,
+    html:true
   },
   video: true,
   screenshotOnRunFailure: true,
