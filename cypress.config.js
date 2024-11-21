@@ -5,7 +5,7 @@ const addCucumberPreprocessorPlugin =
   require("@badeball/cypress-cucumber-preprocessor").addCucumberPreprocessorPlugin;
 const createEsbuildPlugin =
   require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
-const cypressOnFix = require('cypress-on-fix');
+const cypressOnFix = require('cypress-on-fix'); //
 
 module.exports = defineConfig({
   e2e: {
@@ -13,7 +13,7 @@ module.exports = defineConfig({
       const bundler = createBundler({
         plugins: [createEsbuildPlugin(config)],
       });
-      on = cypressOnFix(on);
+      on = cypressOnFix(on);//
 
       on("file:preprocessor", bundler);
       require('cypress-mochawesome-reporter/plugin')(on);
@@ -35,7 +35,6 @@ module.exports = defineConfig({
       openMode: 2,
     },
     baseUrl: "https://business.toptalla.com/en/",
-
   },
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
@@ -52,5 +51,4 @@ module.exports = defineConfig({
   video: true,
   screenshotOnRunFailure: true,
   trashAssetsBeforeRuns:false,
-
 });
